@@ -1,4 +1,4 @@
-package com.kognitiv.org.api.security;
+package com.kognitiv.org.collectoffer.controller.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

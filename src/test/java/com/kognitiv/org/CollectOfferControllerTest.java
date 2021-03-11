@@ -14,11 +14,11 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.kognitiv.org.api.CollectOfferController;
-import com.kognitiv.org.api.CollectOfferService;
-import com.kognitiv.org.api.RestService;
-import com.kognitiv.org.dto.ResponseDto;
-import com.kognitiv.org.entity.Offer;
+import com.kognitiv.org.collectoffer.controller.CollectOfferController;
+import com.kognitiv.org.collectoffer.model.CreateOfferRequestModel;
+import com.kognitiv.org.collectoffer.model.CreateOfferResponseModel;
+import com.kognitiv.org.collectoffer.service.CollectOfferService;
+import com.kognitiv.org.collectoffer.service.RestService;
 
 @SpringBootTest
 public class CollectOfferControllerTest {
@@ -41,17 +41,17 @@ public class CollectOfferControllerTest {
 		RequestContextHolder
 				.setRequestAttributes(new ServletRequestAttributes(request));
 
-		Offer offer = new Offer();
+		CreateOfferRequestModel offer = new CreateOfferRequestModel();
 		offer.setName("NEWYEAR2021");
 		offer.setValidFrom(LocalDate.parse("2021-01-20"));
 		offer.setValidTill(LocalDate.parse("2021-06-20"));
 		offer.setLocation("Delhi");
 
-		ResponseEntity<ResponseDto> responseEntity = collectOfferController
+		ResponseEntity<CreateOfferResponseModel> responseEntity = collectOfferController
 				.createOffer(offer);
 
 		assertThat(responseEntity.getStatusCodeValue()).isEqualTo(200);
-		assertThat(responseEntity.getBody().getSuccess());
+		assertThat(responseEntity.getBody().isSuccess());
 	}
 
 }

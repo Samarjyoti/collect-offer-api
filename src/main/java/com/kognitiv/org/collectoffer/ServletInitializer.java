@@ -1,4 +1,4 @@
-package com.kognitiv.org;
+package com.kognitiv.org.collectoffer;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

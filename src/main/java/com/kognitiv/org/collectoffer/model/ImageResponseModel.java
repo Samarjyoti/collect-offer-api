@@ -1,17 +1,21 @@
-package com.kognitiv.org.entity;
+package com.kognitiv.org.collectoffer.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
-@Entity
-public class Image {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class ImageResponseModel {
+	
+	@XmlElement private long albumId;
 
-	private long albumId;
-	@Id
-	private long id;
-	private String title;
-	private String url;
-	private String thumbnailUrl;
+	@XmlElement private long id;
+
+	@XmlElement private String title;
+
+	@XmlElement private String url;
+
+	@XmlElement private String thumbnailUrl;
 
 	public long getAlbumId() {
 		return albumId;
@@ -52,5 +56,7 @@ public class Image {
 	public void setThumbnailUrl(String thumbnailUrl) {
 		this.thumbnailUrl = thumbnailUrl;
 	}
+	
+	
 
 }

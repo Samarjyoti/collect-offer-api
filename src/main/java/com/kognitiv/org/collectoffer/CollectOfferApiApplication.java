@@ -1,4 +1,4 @@
-package com.kognitiv.org;
+package com.kognitiv.org.collectoffer;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;

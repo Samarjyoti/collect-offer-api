@@ -1,4 +1,4 @@
-package com.kognitiv.org.api.security;
+package com.kognitiv.org.collectoffer.controller.security;
 
 import java.io.IOException;
 import java.io.PrintWriter;

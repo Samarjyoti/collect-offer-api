@@ -1,4 +1,4 @@
-package com.kognitiv.org.api;
+package com.kognitiv.org.collectoffer.controller;
 
 import java.util.Collections;
 
